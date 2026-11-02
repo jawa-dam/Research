@@ -35,7 +35,7 @@ button:hover{background:#155e75}button:focus-visible,input:focus-visible,select:
 <label for="name">Name or preferred display name</label><input id="name" name="name" autocomplete="name" required>
 <label for="email">Email address for private follow-up</label><input id="email" name="email" type="email" autocomplete="email" required>
 <label for="pathway">Primary area of interest</label>
-<select id="pathway" name="discipline" required><option value="">Choose a pathway</option><option>Hebrew Linguistics</option><option>Biblical and Textual Studies</option><option>Civil Engineering</option><option>Hydrology</option><option>Archaeology</option><option>Mechanical Engineering</option><option>Ancient Near Eastern Studies</option><option>Interdisciplinary / Other</option></select>
+<select id="pathway" name="discipline" required><option value="">Choose a pathway</option><option>Hebrew Linguistics</option><option>Biblical and Textual Studies</option><option>Civil Engineering</option><option>Hydrology</option><option>Archaeology</option><option>Mechanical Engineering</option><option>Curious Citizen / Independent Explorer</option><option>Interdisciplinary / Other</option></select>
 <label for="role">How would you like to participate?</label>
 <select id="role" name="participation_type" required><option value="">Choose one</option><option>Specialist research contributor</option><option>Research supporter / source finder</option><option>Follow public research updates</option></select>
 <label for="background">Relevant experience or research interest (optional)</label><textarea id="background" name="background" maxlength="3000"></textarea>
@@ -47,4 +47,4 @@ button:hover{background:#155e75}button:focus-visible,input:focus-visible,select:
 </form>
 </section>
 <p class="footer"><a href="index.html">Return to GEI Research</a> · <a href="https://yalltoo.com">Y'allToo</a></p>
-</main></body></html>
+</main><script>const params=new URLSearchParams(window.location.search);const requested=params.get("pathway");const select=document.getElementById("pathway");if(requested&&select){const option=Array.from(select.options).find(o=>o.text.trim()===requested||o.value===requested);if(option)select.value=option.value;}</script></body></html>
