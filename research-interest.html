@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Express interest in contributing to the GEI Open Research Initiative. Seven disciplines, independent examination, and no agreement required.">
+<title>GEI Research Interest | If the Shoe Fits</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f8fafc;color:#111827;font:16px/1.65 Arial,Helvetica,sans-serif}
+a{color:#0e7490}.wrap{width:min(760px,calc(100% - 32px));margin:0 auto;padding:28px 0 64px}
+header{display:flex;align-items:center;gap:12px;margin-bottom:28px}header img{width:52px;height:52px;object-fit:contain}
+.brand{font-weight:800;color:#0e7490;letter-spacing:.02em}.panel{background:white;border:1px solid #dbe2ea;border-radius:18px;padding:clamp(20px,5vw,40px);box-shadow:0 12px 36px rgba(15,23,42,.06)}
+.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#be185d}
+h1{font-size:clamp(2rem,7vw,3.4rem);line-height:1.05;margin:.55rem 0 1rem;letter-spacing:-.04em}
+.lead{font-size:1.08rem;color:#475569}.notice{margin:24px 0;padding:16px;border-left:4px solid #0e7490;background:#ecfeff;border-radius:8px;color:#164e63}
+label{display:block;font-weight:700;margin:18px 0 6px}input,select,textarea{width:100%;padding:12px 13px;border:1px solid #cbd5e1;border-radius:9px;font:inherit;background:#fff;color:#111827}
+textarea{min-height:120px;resize:vertical}.choices{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}.choice{display:flex;gap:9px;align-items:flex-start;padding:10px;border:1px solid #dbe2ea;border-radius:9px;font-weight:500}.choice input{width:auto;margin-top:5px}
+button{margin-top:24px;padding:13px 20px;border:0;border-radius:9px;background:#64748b;color:#fff;font-weight:800;font-size:1rem;cursor:not-allowed;width:100%}
+.small{font-size:.86rem;color:#64748b}.footer{margin-top:24px;text-align:center;font-size:.86rem;color:#64748b}
+@media(max-width:520px){.choices{grid-template-columns:1fr}}
+</style>
+</head>
+<body><main class="wrap">
+<header><img src="https://assets.zyrosite.com/YZ9jg46Bljs5wOZR/gei-open-research-YdUCaa1Wafpd7vkJ.png" alt="GEI logo"><div class="brand">GEI OPEN RESEARCH INITIATIVE</div></header>
+<section class="panel">
+<p class="eyebrow">A separate research contact channel</p>
+<h1>If the shoe fits,<br>wear it.</h1>
+<p class="lead">We're inviting people with relevant expertise, thoughtful questions, useful sources, and constructive criticism to take part in an independent examination of the GEI research questions.</p>
+<div class="notice"><strong>Research-interest form setup in progress.</strong><br>This dedicated form is being prepared separately from ordinary Y'allToo support. It is not accepting or transmitting submissions yet. Please do not enter personal information until the form is activated.</div>
+<form action="https://formspree.io/f/REPLACE_WITH_NEW_GEI_FORM_ID" method="POST">
+<label for="name">Name or preferred display name</label><input id="name" name="name" autocomplete="name" disabled>
+<label for="email">Email address for private follow-up</label><input id="email" name="email" type="email" autocomplete="email" disabled>
+<label for="pathway">Primary area of interest</label>
+<select id="pathway" name="discipline" disabled><option value="">Choose a pathway</option><option>Hebrew Linguistics</option><option>Biblical and Textual Studies</option><option>Civil Engineering</option><option>Hydrology</option><option>Archaeology</option><option>Mechanical Engineering</option><option>Ancient Near Eastern Studies</option><option>Interdisciplinary / Other</option></select>
+<label for="role">How would you like to participate?</label>
+<select id="role" name="participation_type" disabled><option value="">Choose one</option><option>Specialist research contributor</option><option>Research supporter / source finder</option><option>Follow public research updates</option></select>
+<label for="background">Relevant experience or research interest (optional)</label><textarea id="background" name="background" disabled></textarea>
+<label for="question">What question, critique, source, or idea would you bring? (optional)</label><textarea id="question" name="question" disabled></textarea>
+<label class="choice"><input type="checkbox" name="contact_consent" value="yes" disabled><span>I agree to be contacted privately about this research inquiry.</span></label>
+<label class="choice"><input type="checkbox" name="public_attribution" value="yes" disabled><span>I separately agree that my name may be publicly attributed if I later contribute. (Optional; leave unchecked otherwise.)</span></label>
+<button type="button" disabled>Research form not active yet</button>
+<p class="small">When activated, only the information needed to respond will be requested. Do not submit home addresses, phone numbers, dates of birth, government IDs, confidential research, or sensitive personal information. Public attribution will remain optional.</p>
+</form>
+</section>
+<p class="footer"><a href="index.html">Return to GEI Research</a> · <a href="https://yalltoo.com">Y'allToo</a></p>
+</main></body></html>
