@@ -1,30 +1,34 @@
-# Dedicated GEI Research-Interest Form — Activation Checklist
+# Dedicated GEI Research-Interest Form — Activation and Maintenance
 
-## Purpose
-This form is a separate channel for GEI research inquiries. It must not reuse the existing ordinary Y'allToo support Formspree endpoint.
+## Integration choice
+The GEI recruitment site is a static HTML site hosted on GitHub Pages. Use Formspree's **Basic HTML** integration: a standard HTML form with `method="POST"` and the dedicated endpoint. No React, npm package, build step, or JavaScript SDK is needed.
 
-## Current status
-- The public page `research-interest.html` is a designed, non-submitting preview.
-- All fields and the submit control are disabled.
-- The placeholder endpoint `REPLACE_WITH_NEW_GEI_FORM_ID` is intentionally not operational.
-- No form submission is collected or transmitted by this page at this stage.
+## Current integration
+- Page: `research-interest.html`
+- Form action: `https://formspree.io/f/mljjollo`
+- Method: `POST`
+- Form is separate from ordinary Y'allToo support.
+- Hidden `_subject` identifies the incoming inquiry.
+- Hidden `_gotcha` honeypot is provided for spam filtering.
+- Name, email, discipline, participation type, and contact consent are required.
+- Background and question/critique fields are optional.
+- Public attribution is a separate optional checkbox and is unchecked by default.
 
-## Activation steps
-1. Create a **new, separate form** in the chosen form provider (for example, a new Formspree form dedicated to GEI research interest).
-2. Configure its recipient and notification settings to the research contact inbox you choose.
-3. Set spam protection and enable HTTPS.
-4. Replace the placeholder form action in `research-interest.html` with the new GEI-only endpoint. Do not use the existing Y'allToo support endpoint.
-5. Remove the `disabled` attributes from the inputs, selects, textareas, consent checkboxes, and submit button. Change the button to `type="submit"`.
-6. Add a hidden subject field such as `<input type="hidden" name="_subject" value="New GEI research-interest inquiry">`.
-7. Test a submission using a test address, verify receipt and spam handling, then test the live GitHub Pages URL on mobile and desktop.
-8. Publish a short privacy notice explaining who receives submissions, why the information is collected, and how someone can request deletion.
+## Formspree dashboard checks
+1. Sign in to Formspree and open the form associated with endpoint `mljjollo`.
+2. Confirm the notification recipient is the intended GEI research inbox.
+3. Complete any email verification or activation step Formspree requires.
+4. Review spam filtering and allowed-domain settings. If domain restrictions are enabled, allow the published GitHub Pages origin: `https://jawa-dam.github.io`.
+5. Submit a test inquiry from the published page and confirm it arrives at the intended inbox. Also check spam filtering and the Formspree submission dashboard.
+6. Test on mobile and desktop. Confirm required-field validation, optional attribution behavior, and the post-submit confirmation/redirect behavior provided by Formspree.
 
-## Data-minimization and consent
+## Privacy and consent
 - Ask only for preferred name, email, discipline, participation type, and optional research-interest details.
 - Keep public attribution as a separate optional opt-in; unchecked by default.
 - Do not request home address, date of birth, phone number, government ID, or confidential material.
-- Do not imply academic credentials are verified or that participation constitutes institutional endorsement, employment, compensation, certification, or formal peer review.
+- Publish a short privacy notice explaining who receives submissions, why the information is collected, and how someone can request deletion.
 - Do not publish contact details or private submissions in GitHub issues, pull requests, or public repository files.
+- Do not imply academic credentials are verified or that participation constitutes institutional endorsement, employment, compensation, certification, or formal peer review.
 
-## Future improvements
-A secure private researcher portal with authenticated roles and submission tracking is a separate project. A basic contact form is not a substitute for private research-workspace access controls.
+## Important limitation
+This is a private contact form, not a secure researcher portal. Formspree handles form delivery; GitHub Pages does not provide authenticated private workspaces, reviewer permissions, or confidential research-submission management. Build those separately if needed.
